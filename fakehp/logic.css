@@ -1,0 +1,115 @@
+#nyala {
+  width: 4.75cm;
+  height: 9.75cm;
+  display: flex;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 12.5px;
+  box-shadow: 0px 0px 100px white;
+  opacity: 0;
+  gap: 10px;
+  transition: 2s;
+  z-index: 5;
+}
+
+#nyala:target {
+  opacity: 1;
+}
+
+.bulat {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2.5px solid gray;
+  border-top: 2.5px solid red;
+  opacity: 0.8;
+  animation: 2s putar infinite linear;
+}
+
+@keyframes putar {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(720deg);
+  }
+}
+
+.mulai {
+  background-color: #fdfdfd;
+  color: red;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  padding: 5px;
+  border-radius: 2px;
+  margin: 0 auto;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.hidup {
+  width: 4.75cm;
+  height: 9.75cm;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #999;
+  border-radius: 12.5px;
+}
+
+.pembungkus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pembungkus label {
+  font-weight: bold;
+}
+
+.pembungkus input {
+  background: transparent;
+  border: 2px solid transparent;
+  border-bottom: 2px solid black;
+  outline: none;
+  width: 70%;
+  -webkit-appearance: none;
+}
+
+.pembungkus #tombolp {
+  font-size: 10px;
+  font-weight: bold;
+  background-color: #aaa;
+  color: #222;
+  border-radius: 1px;
+  padding: 5px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.pembungkus #tombolp:hover {
+  background-color: #bbb;
+  box-shadow: 0px 0px 3px black;
+}
+
+#peringatan {
+  font-size: 10px;
+}
+
+#maintampilan {
+  width: 4.75cm;
+  height: 9.75cm;
+  background-color: #333;
+  border-radius: 12.5px;
+  display: flex;
+  overflow: auto;
+  position: absolute;
+}

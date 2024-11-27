@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .slide {
+        animation: slide .5s forwards;
+      }
+
+      @keyframes slide {
+        from {
+          transform: translateY(60px);
+        }
+      }
+
+      .slidekiri {
+        animation: slidekiri .8s forwards;
+      }
+
+      @keyframes slidekiri {
+        from {
+          opacity: 0;
+          transform: translate(650px);
+        }
+        to {
+          opacity: 1;
+          transform: translate(0px);
+        }
+      }
+
+    </style>
+  </head>
+  <body class="bg-slate-950">
+    <div class="tampilanStatus">
+    <div
+      class="bg-slate-950 border-b border-gray-800 p-2 flex justify-between fixed w-[100%] z-20"
+    >
+      <h2 class="text-white mx-1">Pembaruan</h2>
+      <div class="flex gap-5">
+        <img src="icon/kamera.png" alt="" class="cursor-pointer" />
+        <img
+          src="icon/search.png"
+          alt=""
+          width="24px"
+          height="24px"
+          class="cursor-pointer"
+        />
+        <img src="icon/titik.png" alt="" class="cursor-pointer" />
+      </div>
+    </div>
+    <div class="bg-slate-950 h-11 w-[100%]"></div>
+    <div class="">
+      <div class="flex flex-col gap-4 mt-3 ml-2">
+        <h4 class="text-white font-semibold ml-[4px]">Status</h4>
+        <div
+          class="py-[7px] px-1 ml-2 flex gap-3.5 cursor-pointer hover:bg-slate-800"
+        >
+          <div class="w-[40px] h-[40px] rounded-full relative">
+            <div class="w-full h-full overflow-hidden rounded-full">
+              <img src="foto/vancin.jpeg" alt="" />
+            </div>
+            <img
+              src="icon/plus.png"
+              alt=""
+              width="18"
+              class="absolute top-[23px] left-[28px] bg-black rounded-full"
+            />
+          </div>
+          <div>
+            <h5 class="text-white font-semibold text-sm">Status saya</h5>
+            <p class="text-gray-400 text-[13px]">
+              Ketuk untuk memperbarui status
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="flex mx-4 mt-4 mb-2 justify-between items-end relative">
+        <p class="text-gray-400 text-[13px]">Pembaruan yang dilihat</p>
+        <img
+          src="icon/slide.png"
+          alt=""
+          width="15"
+          class="rotate-180 cursor-pointer"
+          id="buka"
+        />
+        <img
+          src="icon/slide.png"
+          alt=""
+          width="15"
+          class="cursor-pointer"
+          id="tutup"
+        />
+      </div>
+      <div class="" id="statusOrang">
+        <h3 class="text-gray-400 text-center my-5">Tidak ada pembaruan</h3>
+      </div>
+      <hr class="border-gray-800" />
+      <div class="flex flex-col gap-[5px] mt-3 mx-2">
+        <h4 class="text-white font-semibold ml-[4px]">Saluran</h4>
+        <p class="text-gray-400 text-[13px] ml-[4px]">
+          Dapatkan berita terbaru tentang topik yang anda minati. Temukan
+          saluran untuk diikuti di bawah ini.
+        </p>
+      </div>
+      <div class="flex flex-col gap-[5px] my-5 mx-3">
+        <p class="text-gray-400 text-[13px] font-semibold">
+          Temukan saluran untuk diikuti
+        </p>
+        <p
+          class="text-green-400 font-semibold text-[12px] border border-gray-800 rounded-full w-[120px] text-center p-1.5 cursor-pointer mt-2"
+        >
+          Jelajahi lainnya
+        </p>
+      </div>
+    </div>
+
+    <div
+      class="fixed bottom-0 w-[100%] border-t border-gray-800 px-6 py-[16px] flex justify-around bg-slate-950"
+    >
+      <a href="chat.html">
+        <div class="flex flex-col items-center cursor-pointer">
+          <img src="icon/chat.png" alt="" width="24px" height="24px" class="" />
+          <h2 class="text-white text-sm">Chat</h2>
+        </div>
+      </a>
+      <a href="pembaruan.html">
+        <div class="flex flex-col items-center cursor-pointer">
+          <div class="w-[45px] bg-green-900 flex justify-center rounded-xl">
+            <img src="icon/status.png" alt="" width="24px" height="24px" />
+          </div>
+          <h2 class="text-white text-sm">Pembaruan</h2>
+        </div>
+      </a>
+      <a href="komunitas.html">
+        <div class="flex flex-col items-center cursor-pointer">
+          <img src="icon/community.png" alt="" width="24px" height="24px" />
+          <h2 class="text-white text-sm">Komunitas</h2>
+        </div>
+      </a>
+      <a href="panggilan.html">
+        <div class="flex flex-col items-center cursor-pointer">
+          <img
+            src="icon/calling.png"
+            alt=""
+            width="24px"
+            height="24px"
+            class="rotate-[270deg]"
+          />
+          <h2 class="text-white text-sm">Panggilan</h2>
+        </div>
+      </a>
+    </div>
+    <div
+      class="flex flex-col fixed bottom-[75px] z-20 right-[1px] items-center"
+    >
+      <img
+        src="icon/pencil.png"
+        alt=""
+        class="bg-gray-600 rounded-lg w-8 my-1 mx-4 p-[7px] cursor-pointer slide z-0"
+        id="pencil"
+      />
+      <img
+        src="icon/kamera1.png"
+        alt=""
+        width="20px"
+        height="20px"
+        class="bg-green-400 rounded-lg w-10 m-4 p-[10px] cursor-pointer z-10"
+      />
+    </div>
+    </div>
+    <div class="w-full h-full bg-gray-500 fixed top-0 z-30 flex flex-col p-3 slidekiri" id="tampilanTeksStatus">
+      <div class="flex justify-between">
+        <img src="icon/wrong.png" alt="wrong" width="34px" class="cursor-pointer rounded-full bg-gray-800 opacity-90 p-[2px]" id="tombolX">
+        <div class="flex gap-2">
+          <img src="icon/emoji.png" alt="emoji" width="34px" class="cursor-pointer rounded-full bg-gray-800 opacity-90 p-[2px]">
+          <img src="icon/color.png" alt="color" width="34px" class="cursor-pointer rounded-full bg-gray-800 opacity-90 p-[5px]" id="gantiWarnaBg">
+        </div>
+      </div>
+      <div class="w-auto mt-5 flex justify-center items-center h-[85%]">
+        <input type="text" class="text-center bg-transparent text-xl h-10 text-white outline-none w-full" placeholder="Ketik status" id="teksStatus">
+      </div>
+      <img src="icon/send.png" alt="" width="40px" class="bg-green-400 rounded-full mr-3 absolute p-2 bottom-4 right-1  cursor-pointer" id="kirim">
+    </div>
+    <script>
+      let buka = document.querySelector("#buka");
+      let tutup = document.querySelector("#tutup");
+      let statusOrang = document.querySelector("#statusOrang");
+      let buatStatus = document.querySelector("#pencil");
+      let tampilanTeksStatus = document.querySelector("#tampilanTeksStatus");
+      const tombolX = document.querySelector("#tombolX");
+      let gantiWarnaBg = document.querySelector("#gantiWarnaBg");
+      const kirim = document.querySelector("#kirim");
+
+      statusOrang.style.display = "none";
+      tutup.style.display = "none";
+      tampilanTeksStatus.style.display = "none";
+
+      buka.addEventListener("click", function () {
+        statusOrang.style.display = "block";
+        buka.style.display = "none";
+        tutup.style.display = "flex";
+      });
+
+      tutup.addEventListener("click", function () {
+        statusOrang.style.display = "none";
+        buka.style.display = "flex";
+        tutup.style.display = "none";
+      });
+
+      buatStatus.addEventListener("click", function () {
+        tampilanTeksStatus.style.display = "flex";
+      });
+
+      tombolX.addEventListener("click", function () {
+        tampilanTeksStatus.style.display = "none";
+      });
+
+      gantiWarnaBg.addEventListener("click", function () {
+        r = Math.round(Math.random() * 255 + 1)
+        g = Math.round(Math.random() * 255 + 1)
+        b = Math.round(Math.random() * 255 + 1)
+        tampilanTeksStatus.style.backgroundColor = "rgb("+r+","+g+","+b+")"
+      });
+
+      kirim.addEventListener("click", function () {
+        tampilanTeksStatus.style.display = "none";
+      });
+    </script>
+  </body>
+</html>

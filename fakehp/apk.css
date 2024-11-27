@@ -1,0 +1,55 @@
+#maintampilan label {
+    font-weight: bold;
+    font-size: 9px;
+    color: #eee;
+}
+
+#maintampilan .box {
+    width: 20%;
+    height: 20%;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 0 10px;
+    gap: 5px;
+}
+
+.sejajar img {
+    border-radius: 6px;
+}
+
+.sejajar {
+    display: flex;
+    flex-direction: column;
+  }
+  
+.barisan {
+    display: flex;
+    margin: 15px 15px;
+    justify-content: space-between;
+    align-items: end;
+    padding: auto 30px;
+}
+
+.kalkulator img {
+    border-radius: 50%;
+}
+
+.googlebar {
+
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back {
+    background-color: rgba(255,255,255,.8);
+    width: 85%;
+    height: 23px;
+    border-radius: 20px;
+}

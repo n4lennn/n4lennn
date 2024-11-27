@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ANDROID</title>
+    <link rel="stylesheet" href="Hp.css" />
+    <link rel="stylesheet" href="logic.css" />
+    <link rel="stylesheet" href="apk.css" />
+  </head>
+  <body>
+    <div class="bungkus">
+      <div class="hp">
+        <div class="kamera">
+          <div class="kamera1"></div>
+        </div>
+        <div class="layar">
+          <div id="nyala">
+            <img
+              src="Itel.jpg"
+              alt="itel"
+              class="logo"
+              width="80px"
+              height="45px"
+            />
+            <div class="bulat"></div>
+            <div class="mulai">MULAI</div>
+          </div>
+          <div class="hidup">
+            <div class="pembungkus">
+              <label>Masukkan PIN</label>
+              <input type="number" id="inputs" />
+              <div id="tombolp">ENTER</div>
+            </div>
+            <h3 id="peringatan"></h3>
+          </div>
+          <div id="maintampilan">
+            <div class="sejajar">
+              <div class="barisan 1">
+                <div class="box google">
+                  <img src="google.webp" width="25px" height="25px" />
+                  <label for="google">Google</label>
+                </div>
+                <div class="box whatsapp">
+                  <img src="whatsapp.png" width="25px" height="25px" />
+                  <label>Whatsapp</label>
+                </div>
+                <div class="box setting">
+                  <img src="setting.jpeg" width="25px" height="25px" />
+                  <label>Setting</label>
+                </div>
+              </div>
+              <div class="barisan 2">
+                <div class="box instagram">
+                  <img src="ig.jpeg" width="25px" height="25px" />
+                  <label>Instagram</label>
+                </div>
+                <div class="box facebook">
+                  <img src="fb.png" width="25px" height="25px" />
+                  <label>Facebook</label>
+                </div>
+                <div class="box youtube">
+                  <img src="yt.jpeg" width="25px" height="25px" />
+                  <label>Youtube</label>
+                </div>
+              </div>
+              <div class="barisan 3">
+                <div class="box kalkulator">
+                  <img src="kalkulator.jpeg" width="25px" height="25px" />
+                  <label>Kalkulator</label>
+                </div>
+                <div class="box shope">
+                  <img src="shope.png" width="25px" height="25px" />
+                  <label>Shopee</label>
+                </div>
+                <div class="box tiktok">
+                  <img src="tiktok.png" width="25px" height="25px" />
+                  <label>Tiktok</label>
+                </div>
+              </div>
+              <div class="googlebar">
+                <div class="back">
+                  <img src="google.webp" width="25px" height="25px" />
+                </div>
+              </div>
+              <div class="barisan 4">
+                <div class="box play">
+                  <img src="play.jpeg" width="25px" height="25px" />
+                  <label>PlayStore</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#nyala">
+          <div class="power"></div>
+        </a>
+      </div>
+    </div>
+
+    <script>
+      const nyala = document.querySelector("#nyala");
+      const button = document.getElementById("btn");
+      const power = document.querySelector(".power");
+      const bulat = document.querySelector(".bulat");
+      const mulai = document.querySelector(".mulai");
+      const hidup = document.querySelector(".hidup");
+      const logo = document.querySelector(".logo");
+      const tombolp = document.getElementById("tombolp");
+      let peringatan = document.getElementById("peringatan");
+      let inputs = document.getElementById("inputs");
+      const maintampilan = document.getElementById("maintampilan");
+
+      mulai.style.display = "none";
+      hidup.style.display = "none";
+      maintampilan.style.display = "none";
+
+      power.addEventListener("click", function () {
+        setTimeout(function () {
+          bulat.style.display = "none";
+          mulai.style.display = "flex";
+        }, 5000);
+      });
+
+      mulai.addEventListener("click", function () {
+        bulat.style.display = "block";
+        mulai.style.display = "none";
+        setTimeout(function () {
+          hidup.style.display = "flex";
+          bulat.style.display = "none";
+          mulai.style.display = "none";
+          logo.style.display = "none";
+          nyala.style.display = "none";
+        }, 5000);
+      });
+
+      tombolp.addEventListener("click", function () {
+        if (inputs.value == "1140") {
+          maintampilan.style.display = "block";
+          hidup.style.display = "none";
+        } else {
+          peringatan.innerHTML = "KODE SALAH";
+        }
+      });
+    </script>
+  </body>
+</html>

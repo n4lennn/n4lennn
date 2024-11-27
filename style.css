@@ -1,0 +1,310 @@
+*,body,html {
+  scroll-behavior: smooth;
+}
+
+  /* nav */
+.container .collapse ul li a:hover {
+  background-color: rgba(173, 0, 0,.8);
+  border-radius: 7px;
+}
+
+/* head */
+.Home {
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  padding-top: 80px;
+}
+.Home h1 {
+  animation: muncul 2s forwards;
+  margin-top: 25px;
+}
+@keyframes muncul {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.Home .vancin {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  animation: ukuran 2s forwards;
+}
+
+.Home p {
+  animation: ukuran 2s forwards;
+}
+
+@keyframes ukuran {
+  from {
+    transform: translateY(80px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes kekiri {
+  from {
+    opacity: 0;
+    transform: translate(120px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes kekanan {
+  from {
+    opacity: 0;
+    transform: translate(-120px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+/* about */
+.tentang,.front,.bpl,.prjk {
+  animation: muncul ease-in-out;
+  animation-timeline: view();
+  animation-range: entry 0% cover 60%;
+}
+
+.tentang1 {
+  animation: kekanan ease-in-out;
+  animation-timeline: view();
+  animation-range: entry 0% cover 50%;
+}
+
+.tentang2 {
+  animation: ukuran ease-in-out;
+  animation-timeline: view();
+  animation-range: entry 0% cover 50%;
+}
+
+.tentang3 {
+  animation: kekiri ease-in-out;
+  animation-timeline: view();
+  animation-range: entry 0% cover 50%;
+}
+
+.card1 {
+  animation: ukuran ease-in-out;
+  animation-timeline: view();
+  animation-range: entry 0% cover 25%;
+}
+
+.card2 {
+  animation: ukuran ease-in-out;
+  animation-timeline: view();
+  animation-range: entry 0% cover 45%;
+}
+
+.card3 {
+  animation: ukuran ease-in-out;
+  animation-timeline: view();
+  animation-range: entry 0% cover 65%;
+}
+
+#projects {
+  background-color: #f8f8f8;
+}
+
+/* kartu */
+.isi {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* animasi teks */
+#pagi:before {
+  content: "";
+  animation: katapagi 5s infinite alternate, 5s infinite alternate;
+}
+
+@keyframes pudar {
+  0%,
+  44% {
+    opacity: 1;
+  }
+  45%,
+  50% {
+    opacity: 0;
+  }
+  51%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes katapagi {
+  0%,
+  50% {
+    content: "Hai! selamat pagi";
+  }
+
+  51%,
+  100% {
+    content: "Hello! good morning";
+  }
+}
+
+#siang:before {
+  content: "";
+  animation: katasiang 5s infinite alternate, 5s infinite alternate;
+}
+
+@keyframes pudar {
+  0%,
+  44% {
+    opacity: 1;
+  }
+  45%,
+  50% {
+    opacity: 0;
+  }
+  51%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes katasiang {
+  0%,
+  50% {
+    content: "Hai! selamat siang";
+  }
+
+  51%,
+  100% {
+    content: "Hello! good evening";
+  }
+}
+
+#sore:before {
+  content: "";
+  animation: katasore 5s infinite alternate, 5s infinite alternate;
+}
+
+@keyframes pudar {
+  0%,
+  44% {
+    opacity: 1;
+  }
+  45%,
+  50% {
+    opacity: 0;
+  }
+  51%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes katasore {
+  0%,
+  50% {
+    content: "Hai! selamat sore";
+  }
+
+  51%,
+  100% {
+    content: "Hello! good evening";
+  }
+}
+
+#malam:before {
+  content: "";
+  animation: katamalam 5s infinite alternate, 5s infinite alternate;
+}
+
+@keyframes pudar {
+  0%,
+  44% {
+    opacity: 1;
+  }
+  45%,
+  50% {
+    opacity: 0;
+  }
+  51%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes katamalam {
+  0%,
+  50% {
+    content: "Hai! selamat malam";
+  }
+
+  51%,
+  100% {
+    content: "Hello! good night";
+  }
+}
+
+/* contact */
+
+/* footer */
+.konten-footer {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "poto1 poto2"
+    "judul1 judul2";
+  justify-items: center;
+  gap: 20px;
+}
+
+.konten-footer .nama1 {
+  grid-area: judul1;
+}
+
+.konten-footer .nama2 {
+  grid-area: judul2;
+}
+
+.konten-footer img {
+  cursor: pointer;
+}
+
+section {
+  padding-top: 60px;
+}
+
+@media (max-width: 768px) {
+  .konten-footer {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "poto1"
+      "judul1"
+      "poto2"
+      "judul2";
+  }
+
+  .tentang1,.tentang2,.tentang3 {
+    animation: ukuran ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 60%;
+  }
+}
+

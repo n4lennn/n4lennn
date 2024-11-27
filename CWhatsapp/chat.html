@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .slide {
+        animation: slide .8s forwards;
+      }
+
+      @keyframes slide {
+        from {
+          opacity: 0;
+          transform: translate(650px);
+        }
+        to {
+          opacity: 1;
+          transform: translate(0px);
+        }
+      }
+
+    </style>
+  </head>
+  <body class="bg-slate-950">
+    <div
+      class="bg-slate-950 border-b border-gray-800 p-2 flex justify-between fixed w-[100%] z-20"
+    >
+      <h2 class="text-white font-semibold mx-1">CWhatsApp</h2>
+      <div class="flex gap-5">
+        <img src="icon/kamera.png" alt="" class="cursor-pointer" />
+        <img
+          src="icon/search.png"
+          alt=""
+          width="24px"
+          height="24px"
+          class="cursor-pointer"
+        />
+        <img src="icon/titik.png" alt="" class="cursor-pointer" />
+      </div>
+    </div>
+    <div class="bg-slate-950 h-11 w-[100%]"></div>
+    <div class="flex gap-2 p-2 px-[14px] z-10">
+      <h4
+        class="text-sm bg-green-950 px-[8px] pt-[1.5px] rounded-2xl font-semibold text-green-600 cursor-pointer z-10"
+      >
+        Semua
+      </h4>
+      <h4
+        class="text-sm bg-slate-800 px-[8px] pt-[1.5px] rounded-2xl font-semibold text-gray-400 cursor-pointer z-10"
+      >
+        Belum dibaca
+      </h4>
+      <h4
+        class="text-sm bg-slate-800 px-[8px] pt-[1.5px] rounded-2xl font-semibold text-gray-400 cursor-pointer z-10"
+      >
+        Favorit
+      </h4>
+      <h4
+        class="text-sm bg-slate-800 px-[8px] pt-[1.5px] rounded-2xl font-semibold text-gray-400 cursor-pointer z-10"
+      >
+        Grup
+      </h4>
+      <h4
+        class="bg-slate-800 px-[7px] pb-[2px] rounded-2xl font-semibold text-gray-400 cursor-pointer z-10"
+      >
+        +
+      </h4>
+    </div>
+    <div class="flex flex-col">
+      <div class="justify-between items-center py-2 px-5 flex gap-5 z-10 cursor-pointer hover:bg-slate-800">
+        <div class="flex gap-5">
+        <img src="icon/archive.png" alt="" />
+        <h4 class="text-white font-semibold">Diarsipkan</h4>
+      </div>
+      </div>
+      <div class="flex flex-col" id="main">
+        <div class="flex p-3 cursor-pointer hover:bg-slate-800">
+          <img
+            src="foto/vancin.jpeg"
+            alt=""
+            width="38px"
+            height="38px"s
+            class="absolute rounded-full"
+          />
+          <div
+            class="ms-[50px] flex w-[100%] justify-between z-10 hover:bg-slate-800"
+          >
+            <div>
+              <p class="text-white text-sm font-semibold">Vancin (owner)</p>
+              <p class="text-gray-400 text-sm">Halo! Selamat datang di clone WhatsApp buatan saya,pencet <span class="font-semibold text-gray-200">addcontact</span> di pojok kanan bawah</p>
+            </div>
+            <div class="flex flex-col items-center gap-1">
+              <p class="text-gray-400 text-xs">Sekarang</p>
+              <img src="icon/pinned.png" alt="" width="17px" class="self-end">
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="p-3 flex hover:bg-slate-800 cursor-pointer" id="kontakBaru">
+          <img src="icon/profile.png" alt="" class="absolute bg-slate-400 p-[7px] rounded-full">
+                  <div
+            class="ml-[50px] flex w-[100%] justify-between z-10"
+          >
+            <div>
+              <div class="flex gap-[5px] items-start">
+                <p class="text-white text-sm font-semibold namaKontak"></p>
+              </div>
+              <div class="flex gap-[3px] items-center justify-start">
+                <img src="icon/correct.png" alt="" width="17px" id="read"/>
+                <p class="text-gray-400 text-sm" id="tampilanChatKontak">Ketuk untuk memulai chat</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>  
+      <div
+        class=" w-full border-t border-gray-800 px-6 py-[16px] flex justify-around bg-slate-950 fixed bottom-0 z-20"
+      >
+      <a href="chat.html">
+        <div class="flex flex-col items-center cursor-pointer relative">
+          <div class="w-[45px] bg-green-900 flex justify-center rounded-xl absolute">
+            <img
+              src="icon/chat.png"
+              alt=""
+              width="24px"
+              height="24px"
+              class=""
+            />
+          </div>
+          <h2 class="text-white text-sm mt-6">Chat</h2>
+        </div>
+        </a>
+        <a href="pembaruan.html">
+        <div class="flex flex-col items-center cursor-pointer">
+          <img src="icon/status.png" alt="" width="24px" height="24px" />
+          <h2 class="text-white text-sm">Pembaruan</h2>
+        </div>
+      </a>
+      <a href="komunitas.html">
+        <div class="flex flex-col items-center cursor-pointer">
+          <img src="icon/community.png" alt="" width="24px" height="24px" />
+          <h2 class="text-white text-sm">Komunitas</h2>
+        </div>
+      </a>
+      <a href="panggilan.html">
+        <div class="flex flex-col items-center cursor-pointer">
+          <img
+            src="icon/calling.png"
+            alt=""
+            width="24px"
+            height="24px"
+            class="rotate-[270deg]"
+          />
+          <h2 class="text-white text-sm">Panggilan</h2>
+        </div>
+      </a>
+      </div>
+    <div class="flex fixed bottom-[75px] z-20 right-[1px]" id="addKontak">
+      <img
+        src="icon/addchat.png"
+        alt=""
+        width="24px"
+        height="24px"
+        class="bg-green-400 rounded-lg w-10 m-4 p-[9px] cursor-pointer"
+      />
+    </div>
+
+
+    <!-- tampilan tambah kontak baru -->
+    <div class="fixed top-0 w-full h-full bg-slate-950 z-30 slide" id="tampilanAddkontak">
+      <div class="px-3 py-1 flex items-center gap-4">
+        <img src="icon/arrow.png" alt="" class="panahKembali cursor-pointer">
+        <h2 class="text-white" id="judulKontak">Kontak baru</h2>
+      </div>
+      <div class=" p-4 flex relative">
+        <img src="icon/profile.png" alt="" class="absolute top-6">
+        <div class="flex flex-col ml-10 mr-4 w-full">
+          <form action="">
+            <label for="depan" class="text-slate-400">Nama depan</label><br>
+            <input type="text" name="depan" class="text-white outline-none w-full ring-0 border-b-2 border-slate-400 bg-slate-950 focus:border-green-400" id="inputdepan">
+            <br>
+            <br>
+            <label for="depan" class="text-slate-400">Nama belakang</label><br>
+            <input type="text" name="depan" class="text-white outline-none w-full ring-0 border-b-2 border-slate-400 bg-slate-950 focus:border-green-400" id="inputbelakang">
+            </form>
+        </div>
+      </div>
+      <div class="w-full flex fixed bottom-0 mb-5">
+        <button class="bg-green-400 font-semibold w-full mx-8 p-1 rounded-full text-sm" id="simpan">Simpan</button>
+      </div>
+    </div>
+    <!-- akhir tampilan kontak baru -->
+
+    <div class="flex flex-col w-full h-full bg-zinc-950 fixed z-20 top-0 slide" id="tampilanKontakBaru">
+      <div class="w-full bg-slate-950 p-1 py-3 flex justify-between">
+        <div class="flex gap-3">
+        <img src="icon/arrow.png" alt="" class="ml-2 panahKembali cursor-pointer">
+        <img src="icon/profile.png" alt="" class="cursor-pointer w-8 bg-slate-400 rounded-full p-1">
+        <p class="text-white namaKontak w-full"></p>
+      </div>
+      <div class="flex gap-4 mr-3">
+      <img src="icon/calling.png" alt=""
+      class="rotate-[270deg] cursor-pointer">
+      <img src="icon/titik.png" alt="" class="cursor-pointer">
+    </div>
+      </div>
+      <div class="flex flex-col items-center mt-2 gap-2">
+        <div class="bg-slate-950 cursor-pointer hover:bg-slate-800 text-gray-400 text-[12px] font-semibold px-[5px] rounded-lg" id="waktu">Sekarang</div>
+        <div class="bg-slate-950 w-[70%] rounded-lg p-1 text-orange-300 text-[12px] text-center cursor-pointer hover:bg-slate-800">Pesan dan panggilan dienkripsi secara end-to-end. Tidak seorang pun di luar chat ini, termasuk WhatsApp, yang dapat membaca atau mendengarkannya.</div>
+      </div>
+      <!-- isi chat -->
+      <div class="flex flex-col items-end mt-4 gap-3" id="chat">
+
+      </div>
+      <!--akhir chat -->
+      <div class="w-full fixed bottom-0 mb-3 flex items-center justify-center ">
+        <div class="p-2 bg-slate-950 rounded-full w-[80%] flex gap-2 mr-12">
+          <img src="icon/emoji.png" alt="" width="28">
+          <input type="text" placeholder="Ketik pesan" class="w-full bg-transparent outline-none g-transparent text-white isichat">
+          <img src="icon/kamera.png" alt="" width="30px" class="mr-2 cursor-pointer">
+        </div>
+        <img src="icon/send.png" alt="" width="40px" class="bg-green-400 rounded-full mr-3 absolute p-2 right-1  cursor-pointer" id="kirim">
+      </div>
+    </div>
+
+    <script>
+      const inputdepan = document.getElementById("inputdepan")
+      const inputbelakang = document.getElementById("inputbelakang")
+      const tampilanAddkontak = document.getElementById("tampilanAddkontak")
+      const panahKembali = document.querySelectorAll(".panahKembali")
+      const addKontak= document.getElementById("addKontak")
+      const simpan = document.getElementById("simpan")
+      let kontakBaru = document.getElementById("kontakBaru")
+      let namaKontak = document.querySelectorAll(".namaKontak")
+      const main = document.getElementById("main")
+      const tampilanKontakBaru = document.getElementById("tampilanKontakBaru")
+      let chat = document.getElementById("chat")
+      let isichat = document.querySelector(".isichat")
+      const kirim = document.getElementById("kirim")
+      let tampilanChatKontak = document.getElementById("tampilanChatKontak")
+      const read = document.getElementById("read")
+      let judulKontak = document.getElementById("judulKontak")
+
+      read.style.display = "none"
+      kontakBaru.style.display = "none"
+      tampilanAddkontak.style.display = "none"
+      tampilanKontakBaru.style.display = "none"
+    
+      addKontak.addEventListener("click",function(){
+        tampilanAddkontak.style.display = "block"
+        inputdepan.value = null 
+        inputbelakang.value = null
+      })
+
+      simpan.addEventListener("click",function(){
+        if (inputdepan.value || inputbelakang.value) {
+        for (x=0 ; x<namaKontak.length ; x++) {
+        namaKontak[x].innerHTML = inputdepan.value + " " + inputbelakang.value
+        tampilanAddkontak.style.display = "none"
+        kontakBaru.style.display = "flex"
+        judulKontak.innerHTML = "Edit kontak"
+      }
+    }
+      })
+
+      kontakBaru.addEventListener("click",function(){
+        for (y=0 ; y<namaKontak.length ; y++) {
+        tampilanKontakBaru.style.display = "flex"
+        namaKontak[y] = inputdepan.value + " " + inputbelakang.value
+        }
+      })
+
+      for (i = 0; i < panahKembali.length; i++) {
+        panahKembali[i].addEventListener("click",function(){
+        tampilanAddkontak.style.display = "none"
+      })
+
+      panahKembali[i].addEventListener("click",function(){
+        tampilanKontakBaru.style.display = "none";
+      })
+      }
+      
+      kirim.addEventListener("click",function(){
+        if (isichat.value) {
+          let elemenp = document.createElement("p")
+        elemenp.setAttribute("class","w-auto text-end bg-green-900 text-white py-1 px-2 rounded-xl rounded-tr-none mr-2")
+      let tchat = document.createTextNode(isichat.value)
+      elemenp.appendChild(tchat)
+        chat.appendChild(elemenp)
+        read.style.display = "flex"
+        }
+        tampilanChatKontak.innerHTML = isichat.value
+        isichat.value = null 
+      })
+
+     
+
+      </script>
+  </body>
+</html>
